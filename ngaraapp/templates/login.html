@@ -1,0 +1,183 @@
+
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ngara website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="js/bootstrap.js">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+<body>
+
+ 
+  
+    {% for post in posts %}
+     <nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">For querry call +254 702228727</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about" >ABOUT US</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/service">SERVICES</a>
+        
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact">CONTACT</a>
+        
+      </li>
+    </ul>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/login">LOGIN  <span class="sr-only">(current)</</a>
+        
+      </li>
+    </ul>
+  </div>
+</nav>
+    <div class=" col-sm-12 col-md-4">
+       <button style="float: right;margin-right: 50px;margin-top: 20px;"><a href="login1.html">LOGIN</a></button>
+    </div> 
+
+  </div>
+
+
+     <div class="container">
+  
+<form  method="post"> 
+    {% csrf_token %}
+   
+    {{ form }}
+     
+ <button type="Submit">SIGN UP</button>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+<div class="container-fluid" style="background-color: #4c97ae;">
+<div class="row">
+<form action="/action_page.php"  style="height: 400px;">
+  <div class="col-sm-12 col-md-6" style="margin-top: 50px; /*margin-left: 50px*/; background-color: red; width: 100%">
+    <input type="text" placeholder="Enter Email" name="uname" required><br>   
+    <input type="password" placeholder="Enter Password" name="psw" required><br>
+    <button type="submit" style="width: 100%">Login</button>
+  </div>
+
+</form>
+
+
+  <div class="col-sm-12 col-md-6" style="width: 100%; background-color: red">
+    <form action="/action_page.php" style="height: 400px; ">
+  <div class="container" style="color:#4c97ae;">
+      
+      
+    <h2 style="color: white">Signup Form</h2>
+    <input type="text" placeholder="Enter Name" name="name" required style=" "><br>   
+    <input type="text" placeholder="Enter Email" name="email" required style=" "><br>   
+    <input type="text" placeholder="Enter Phone number" name="phone number" required style=" "><br>   
+    <input type="password" placeholder="Enter Password" name="psw" required style=" "><br>    
+    <input type="password" placeholder="Comfirm Password" name="psw-repeat" required><br>
+    <button type="submit" class="signupbtn" style="background-color: #193236; width: 100%" >Sign Up</button>
+  </div>
+  </form>
+  </div>
+ 
+  
+</div>
+</div>
+
+{% csrf_token %}
+<form method="post" action="/index">
+    <!--{% csrf_token %}-->
+    <div class="form-group">
+    <p>
+            <label for="id_username">username</label>
+            <input class="form-control" id="id_username" name="username" type="text">
+        </p>
+    <p>
+            <label for="id_password">email</label>
+            <input class="form-control" id="id_password" name="email" type="text">
+            
+        </p>
+        
+        <p>
+            <label for="id_password">confirm email</label>
+            <input class="form-control" id="id_password" name="email" type="text">
+        </p>
+        
+        <p>
+            <label for="id_password">password</label>
+            <input class="form-control" id="id_password" name="password" type="password">
+        </p>
+        
+        <p>
+            <label for="id_password">Repeat password</label>
+            <input class="form-control" id="id_password" name="password" type="password">
+        </p>
+    <button type="submit">login</button>
+    </div>
+</form>
+
+<div class="row" style="background-color: #193236; color: white; height: 300px; width: 100%">
+
+  <div class="col-sm-12 col-md-4"></div>
+  <div class="col-sm-12 col-md-4" style="text-align:center; margin-top: 20px;">
+  <br>
+    <h5 class="talk">LET'S TALK</h5>
+    <p>
+      <span><a href="" style="color: white;">ngaraservice@gmail.com</a></span>
+    </p>
+    <p>
+      <span>
+      Tel:
+      <tel>+254 702228727</tel>
+      </span>
+    </p>
+    <p>
+      <span>
+     
+      Nairobi,Kenya
+      </span>
+    </p>
+
+    <h6>
+      <i class="fa-fa-map-marker">
+      </i>
+      NG'ARA OFFICE
+      <br>
+
+    </h6>
+    <p>
+      <span>
+        6th floor Senteu Plaza
+        lenana road.
+      </span>
+    </p>
+  </div>
+  <div class="col-sm-12 col-md-4"></div>
+  
+ 
+</div>
+</div>
+</form>
+{% endfor %}
+</body>
+</html>

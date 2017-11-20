@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>service Page</title>
+         
+         <link rel="stylesheet" href=" {{STATIC_URL}}https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+         <link rel="stylesheet" href="{{STATIC_URL}}css/main.css">
+        
+    </head>
+    <body>
+  <nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Service</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about" >ABOUT US</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/service">SERVICES</a>
+        
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact">CONTACT  <span class="sr-only">(current)</span></a>
+        
+      </li>
+      
+       <li class="nav-item">
+        <a class="nav-link" href="/login">SIGN UP</a>
+        
+      </li>
+    </ul>
+  </div>
+</nav>
+        
+ <div class="container">
+<form  method="post"> 
+    {% csrf_token %}
+    {{ form }}
+    
+    <div class="row" style=" background-color: #4c97ae;color: #fff; ">
+          <div class="col-sm-12 col-md-3"  ></div>
+          <div class="col-sm-12 col-md-3"  style="margin-left: 20px; margin-right: 20px;margin-top: 70px;">
+  
+  
+              <p>How many rooms?</p>
+              <button class="button button1">1</button>
+              <button class="button button2">2</button>
+              <button class="button button3">3</button>
+              <button class="button button4">4</button>
+              <button class="button button5">5</button>
+              <button class="button button6">6</button>
+              <p>How many hours?</p>
+              <select id="services" name="services"  style="margin-bottom: 10px;">
+              <option value="laundry"></option>
+              <option value="cleaning the house">2</option>
+              <option value="cleaning dishes">3</option>
+              <option value="cleaning dishes">4</option>
+              <option value="cleaning dishes">5</option>
+              <option value="cleaning dishes">6</option>
+              <option value="cleaning dishes">7</option>
+              <option value="cleaning dishes">8</option>
+              <option value="cleaning dishes">9</option>
+              <option value="cleaning dishes">10</option>
+              <option value="cleaning dishes">11</option>
+              <option value="cleaning dishes">12</option>
+            </select>
+                
+            <p for="services">Services</p>
+            <select id="services" name="services" style="margin-bottom: 10px;">
+              <option value="laundry">Laundry</option>
+              <option value="cleaning the house">Kitchen</option>
+              <option value="cleaning dishes">compound</option>
+              <option value="cleaning dishes">Ironing</option>
+              <option value="cleaning dishes">general cleaning</option>
+            </select>
+            <p for="Services">Summary</p> 
+            <textarea type="text" placeholder="Your message" style="margin-bottom: 50px"></textarea>
+          
+        </div>
+
+   <div class="col-sm-12 col-md-3"></div> 
+  <div class="col-sm-12 col-md-3"  style="; margin-left: 20px; margin-right: 20px;margin-top: 70px;">
+      
+   
+      <p style="color: #fff;">Personal details</p>
+      <input type="text" placeholder="Name" style="margin-top: 10px">
+      <input type="text" placeholder="ContactNumber" class="input" >
+      <input type="text" placeholder="Email" class="input">
+      <input type="text" placeholder="Location" class="input">
+      <input id="datepicker" class="input" placeholder="Date" style="margin-bottom: 100px">
+      
+    </div>
+    <div class="col-sm-12 col-md-3" style=""></div>
+</div>
+
+
+</div>
+     
+   <button type="submit">Submit</button>
+</form>
+</div>
+        </header>
+         <script src="{{STATIC_URL}}https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src=" {{STATIC_URL}}https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="{{STATIC_URL}}https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    </body>
+</html>
